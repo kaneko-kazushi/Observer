@@ -1,0 +1,17 @@
+public class Main {
+  public static void main(String[] args) {
+    Suuchi s = new Suuchi();
+    Hyouji o1 = new NishinHyouji();
+    Hyouji o2 = new JyuurokushinHyouji();
+    int oldValue = s.getValue();
+    while (true) {
+      int newValue = s.getValue();
+      if (oldValue != newValue) { // 値が変化した
+        o1.setValue(s.getValue());
+        o2.setValue(s.getValue());
+        oldValue = newValue;
+      }
+      ： (Wait処理など省略)
+    }
+  }
+}
